@@ -8,29 +8,49 @@
 </head>
 <body >
     <!--header-->
-    <header >
+    <header class="center">
         <h2 id="header_title">Password Generator</h2>
     </header>
     
     <!--main-->
-    <main>
-        <button id="generate_btn">
-            GENERATE & COPY
-        </button>
-        <div class="">
-            Press "GENERATE & COPY" button
-        </div>
-        <div class="">
-            <input type="checkbox" id="numbers_id" name="numbers" value="numbers">
-            <label for="numbers_id"> Numbers (0-1-2-3-4-5-6-7-8-9) </label>
-            <input type="checkbox" id="lowercase_id" name="lowercase" value="lowercase">
-            <label for="lowercase_id"> lowercase </label>
-            <input type="checkbox" id="uppercase_id" name="uppercase" value="uppercase">
-            <label for="uppercase_id"> UPPERCASE </label>
-            <input type="checkbox" id="ascii_id" name="ascci" value="ascii">
-            <label for="ascii_id"> ASCII Symbols </label>
-            <input type="checkbox" id="space_id" name="space" value="space">
-            <label for="space_id"> Space </label>
+    <main class="center">
+
+        <div id="action_choices">
+            <button id="generate_btn">
+                GENERATE A RANDOM PASSWORD
+            </button>
+            <div id="result_area">
+                <p>Press "GENERATE & COPY" button</p>
+                <svg id="copy_pass_icon" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 18h-3c-.48 0-1-.379-1-1v-14c0-.481.38-1 1-1h14c.621 0 1 .522 1 1v3h3c.621 0 1 .522 1 1v14c0 .621-.522 1-1 1h-14c-.48 0-1-.379-1-1zm1.5-10.5v13h13v-13zm9-1.5v-2.5h-13v13h2.5v-9.5c0-.481.38-1 1-1z" fill-rule="nonzero"/></svg>
+            </div>
+            <ul class="choices_class">
+                <li>
+                    <label for="length_id"> Length </label>
+                    <input type="number" id="length_id" name="password_length" placeholder="8" min="3" max="100" inputmode="numeric" >
+                </li>
+                <li>
+                    <input type="checkbox" id="numbers_id" name="numbers" value="numbers">
+                    <label for="numbers_id"> Numbers (0-1-2-3-4-5-6-7-8-9) </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="lowercase_id" name="lowercase" value="lowercase">
+                    <label for="lowercase_id"> lowercase </label>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="uppercase_id" name="uppercase" value="uppercase">
+                    <label for="uppercase_id"> UPPERCASE </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="ascii_id" name="ascci" value="ascii">
+                    <label for="ascii_id"> ASCII Symbols </label>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="space_id" name="space" value="space">
+                    <label for="space_id"> Space </label>
+                </li>
+            </ul>
         </div>
 
     </main>
